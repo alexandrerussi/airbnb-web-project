@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #ff385c;
+    --gray-color: #d5d5d5;
+    --gray-font-color: #717171;
+    --gray-light-color: #efefef;
+    --white-color: #fff;
+    --black-color: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--black-color);
+}
+
+header {
+    border-bottom: 1px solid var(--gray-color);
+}
+
+header .container {
+    width: 78%;
+    margin: 0 auto;
+    padding: 1.4rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header .logo {
+    flex-grow: 1;
+}
+
+header .logo svg {
+    color: var(--primary-color);
+}
+
+header .search {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-color);
+    padding-left: 0.5rem;
+    height: 2.7rem;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 20%);
+}
+
+header .search button {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    margin: 0 0.8rem;
+    font-size: 0.9rem;
+    color: var(--black-color);
+    transition: all 0.3s;
+}
+
+header .search .bold:active, header .search .light:active {
+    background-color: var(--gray-color);
+}
+
+header .search .bold {
+    font-weight: bold;
+}
+
+header .search .light {
+    color: var(--gray-font-color);
+}
+
+header .search .line {
+    border-right: 1px solid var(--gray-color);
+    height: 60%;
+}
+
+.search-btn svg {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+header nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 0.95rem;
+    padding: 0.7rem 0.8rem;
+    transition: all 0.3s;
+    border-radius: 1.5rem;
+
+    background-color: transparent;
+}
+
+header nav a:hover, header nav .adv-btn:active {
+    background-color: var(--gray-light-color);
+}
+
+header nav button {
+    height: 2.7rem;
+    background-color: transparent;
+    border: 1px solid var(--gray-color);
+    border-radius: 2rem;
+    padding: 0 0.6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+header nav button svg {
+    margin-left: 0.2rem;
+    color: var(--gray-font-color);
+}
+
+header nav button img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main {
+    width: 78%;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+}
+
+.box-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-title h1 {
+    font-size: 1.7rem;
+}
+
+.box-title .box-btns {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.box-title .box-btns .box-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.box-title .box-btns .box-btn a {
+    color: var(--black-color);
+    font-size: 0.95rem;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 180px 180px;
+    gap: 10px;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.photos div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photos div:first-child {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.photos div:first-child img {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.photos div:nth-child(3) img {
+    border-top-right-radius: 1rem;
+}
+
+.photos div:nth-child(5) img {
+    border-bottom-right-radius: 1rem;
+}
+
+.photos button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    border: 1px solid var(--black-color);
+    background-color: var(--white-color);
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.accomodation-infos {
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.accomodation-infos .content {
+    border: 1px solid #ff385c;
+}
+
+.accomodation-infos .box-check {
+    border: 1px solid blue;    
+}
+
+/* .photos */
+
+@media screen and (max-width: 1250px) {
+    header .container, main {
+        width: 94%;
+    }
+}
